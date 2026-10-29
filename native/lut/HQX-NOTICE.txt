@@ -1,0 +1,21 @@
+HQ3x fallback provenance
+=======================
+
+src/hq_block.c derives from native/vendor/hqx/hq3x.c, whose upstream and pinned
+revision are recorded in native/vendor/hqx/ORIGIN.txt. Copyright Maxim Stepin
+(2003) and Cameron Zemek (2010). LGPL-2.1-or-later; full license in
+native/vendor/hqx/COPYING. Original notices remain in the derived source.
+
+Modifications for this student (2026-10-17): isolated one 3x3 source block's
+HQ3x switch into ds_hq3x_block; added ds_hq3x_block_cached to accept precomputed
+YUV and the original 8-bit HQ key. The 176 additional neighbor-pair comparisons
+use cached YUV with identical thresholds. The pattern switch and original
+interpolation macros are preserved. A conformance test checks the isolated
+fallback against the complete HQ3x renderer, including borders. common.h's
+exact integer YUV conversion is the project's earlier recorded modification.
+
+This derivative is compiled into the separate replaceable dos_lut_hqx shared
+library/framework. Its source, dependent headers, upstream AUTHORS and license
+are included in CMake install output. The student links it dynamically; no
+full-frame teacher library is needed by the student runtime. Keep the library
+replaceable and comply with the LGPL when packaging/distributing an app.

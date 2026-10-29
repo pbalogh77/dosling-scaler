@@ -1,0 +1,5 @@
+framework module dos_lut {
+  umbrella header "dosling_scaler.h"
+  export *
+  module * { export * }
+}

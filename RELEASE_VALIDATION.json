@@ -1,0 +1,33 @@
+{
+  "release": "v49.0.0",
+  "runtime_revision": "quality-v49-concave-bevel",
+  "model": "student-v37",
+  "validation_date": "2026-10-29",
+  "host": {
+    "system": "Darwin",
+    "architecture": "arm64"
+  },
+  "release_build_with_offline_tools": "passed",
+  "portable_native_tests": {
+    "passed": 19,
+    "failed": 0,
+    "wall_seconds": 7.83
+  },
+  "cmake_install": "passed",
+  "hq3x_fallback": "separate dynamically linked dos_lut_hqx; verified with otool",
+  "model_json_binary_round_trip": "byte-identical",
+  "model_sha256": "34b97b9443e376e983840468f897385ec752d343e068afc8e5690d3bfc7ff309",
+  "unchanged_source_model_upstream_files_verified": 50,
+  "local_private_fixed_gallery": {
+    "source_count": 32,
+    "variant_count": 96,
+    "regeneration_and_feedback_checks": "passed",
+    "images_distributed": false
+  },
+  "not_claimed": [
+    "completed GitHub CI before it runs",
+    "on-device benchmark for this source release",
+    "complete historical training reproducibility",
+    "App Store LGPL compliance certification"
+  ]
+}

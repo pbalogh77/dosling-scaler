@@ -1,0 +1,93 @@
+{
+  "model": "student-v37.bin",
+  "embedded_header": "student-v37.h",
+  "sha256": "34b97b9443e376e983840468f897385ec752d343e068afc8e5690d3bfc7ff309",
+  "model_bytes": 30238,
+  "scope": "Measured local concave bevels, general AA and square joins without text detection; immediate source3x3 RGB bounds; optional complex hinted glyph repairs; no de-dithering.",
+  "architecture": "Source-supported geometry including measured3-arm notches; existing3x3/flagged5x5 masked tables and local RGB-range guard. Prepared single-cell bevel blocks reuse cache169.",
+  "runtime_revision": "quality-v49-concave-bevel",
+  "runtime_source_sha256": {
+    "api.cpp": "4d6660cb4951b98b41ef6593d8053c2bec4402992fe0949a71a3f49da0959b37",
+    "frame.cpp": "fc943d3afea4fc521400e930e685b64d790bc446ac7721bee08d4cadbee24d25",
+    "model.cpp": "e8312b18094852c0e8017fecd844366d62e47293ba44bcd6aa7dfb97533299bc",
+    "model.hpp": "81e28476f40c12a1f709b5e4c11ac9e6f60c925d15465208ad9be342b1f0258a",
+    "ufo.cpp": "b2743a898b45b9a954e4f32ea34b99d8427627a08339a47c28948557b2f809f4",
+    "aa_plane.cpp": "e8502813c6f4995c5c6a6c4ee6a49b51554490846d5a2b2f62841c22703a3121",
+    "aa_math.hpp": "58cd769185362565534494eb7dad4e4c3f3401b9cd5b8adf82b2a2dbbcf4788f"
+  },
+  "project_name": "Dosling scaler",
+  "general_aa_policy": {
+    "rgb_support": [
+      5,
+      5
+    ],
+    "corner_monotone_support": [
+      3,
+      3
+    ],
+    "glyph_repairs_require_hints": true,
+    "square_junctions": "No hints: source-supported T/+ with sparse priority over AA units; one/two-pixel strokes and short arms.",
+    "local_thin_corner": {
+      "rgb_support": [
+        3,
+        3
+      ],
+      "requires": "Two adjacent contrasted foreground arms, four background diagonals, Q8 mixture48..220 with shared RGB residual<=144, actual radius-two foreground continuation; square junctions win.",
+      "caller_text_hints": false
+    },
+    "mixed_coverage_corner": {
+      "rgb_support": [
+        5,
+        5
+      ],
+      "requires": "Three repeated foreground and two repeated observed background samples, all25 on a high-contrast RGB segment within squared residual144; two adjacent high arms/four low diagonals, real continuation and an intermediate low shade; fractional centres48..220/Q8 or opaque>=240. Opaque one-arm caps also require continued stem/front field.",
+      "caller_text_hints": false,
+      "prepared_cache": "Sparse block code169; fully opaque copies use code5; square joins and multi-block AA units retain priority."
+    },
+    "local_square_junction": {
+      "rgb_support": [
+        3,
+        3
+      ],
+      "requires": "Source-exact two-colour T/+ core with four square background quadrants, at least3foreground arms and one radius2continuation; reject diagonal returns at short arms and foreground across the empty arm. Outer bevel colours do not define the core. Existing hint-boundary guards apply.",
+      "caller_text_hints": false
+    },
+    "coverage_corner": {
+      "core_rgb_support": [
+        3,
+        3
+      ],
+      "rgb_support": [
+        5,
+        5
+      ],
+      "requires": "3or4actual source colours, contrast>=6912 and all25samples on the observed RGB segment with squared residual<=36; repeated endpoints, Q8 fractional coverage and source-supported convex-cut/weak-diagonal continuation. Opaque elbow needs both continued arms. A core endpoint needs opaque-elbow geometry before full fitting.",
+      "caller_text_hints": false,
+      "prepared_cache": "Reuse existing sparse169 fitted blocks and5solid copies; square joins and accepted multi-block/gap/notch/bowl units retain priority."
+    },
+    "local_rgb_range": {
+      "support": [
+        3,
+        3
+      ],
+      "bound": "Per-channel RGB minimum/maximum, including centre; replicated frame borders. Wider geometry evidence cannot expand these limits. Applies to hinted/unhinted reconstruction in RGB/BGRA.",
+      "runtime": "Final guard on authored non-copy blocks; ordinary local convex copy/LUT/HQ paths are bounded by construction. NEON/scalar exact; no additional allocation.",
+      "coverage_priority": "Local bounds take precedence over wider-field ideal coverage; clipped block means may change."
+    },
+    "measured_concave_bevel": {
+      "rgb_support": [
+        3,
+        3
+      ],
+      "continuation": "Two-step closed foreground stem; three core foreground arms, one open background face, four background quadrants.",
+      "requires": "Contrast>=6912, centre Q8 96..220, squared mixture residual<=36, coherent repeated endpoints and uniform5x5hint scope. Opaque/binary T/+ and weak unsupported centres reject.",
+      "output": "One source-cell3x3block; symmetric45-degree V coverage with phase matched to measured alpha. Existing square joins, gaps and accepted multi-block units retain priority.",
+      "caller_text_hints": false,
+      "cache": "257x9Q8 analytic coverage table initialized once, existing sparse prepared169blocks. V48 local RGB bounds remain."
+    }
+  },
+  "macos_deployment_target": "12.0",
+  "ios_deployment_target": "15.0",
+  "editable_model": "student-v37.json",
+  "license": "LGPL-2.1-or-later"
+}

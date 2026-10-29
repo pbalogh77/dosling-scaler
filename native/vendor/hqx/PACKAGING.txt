@@ -1,0 +1,6 @@
+The adjacent ORIGIN.txt preserves historical local modification notes verbatim.
+Its app/rebuild.sh instructions describe the earlier emulator distribution, not
+this standalone source repository. Here, build native/lut with CMake. The
+fallback target is dos_lut_hqx and is dynamically linked by dos_lut. Original
+HQ3x is used by the conformance test. No emulator app or rebuild.sh is included.
+See the repository NOTICE.md and docs/INTEGRATION.md for current instructions.

@@ -1,0 +1,222 @@
+{
+  "runtime": "V49",
+  "revision": "quality-v49-concave-bevel",
+  "date": "2026-10-29",
+  "upstream_hqx": {
+    "repository": "https://github.com/grom358/hqx",
+    "revision": "a1c7d415f4bb7b947c4c2e47faf220b0148f4bac"
+  },
+  "unchanged_files": [
+    {
+      "path": "native/lut/HQX-NOTICE.txt",
+      "sha256": "fd81e59e12841dd0f26059e24adceb9387d3ff2eab9519283ba9587cf1dcbd7f"
+    },
+    {
+      "path": "native/lut/cmake/dos_lut.modulemap",
+      "sha256": "a8befd2d8780ccd2b6759186c39e940ffc3771b01b47bbc481566a89f1426de9"
+    },
+    {
+      "path": "native/lut/examples/check_file.cpp",
+      "sha256": "181a1bf2116837a8ecd916992fbe97b22028494c000c4173515ebe42a7410fee"
+    },
+    {
+      "path": "native/lut/examples/embed.c",
+      "sha256": "283cb4ae61cb8aa5e33a302738999cd2b37315271bd7f9084f224dbefb88c90d"
+    },
+    {
+      "path": "native/lut/examples/smoke_bgra.c",
+      "sha256": "477f59574adfe0d442739f15d77a0843511d432f6e62cdd2cde88eb206589a97"
+    },
+    {
+      "path": "native/lut/include/dos_lut.h",
+      "sha256": "2de6364ae1470013e8b6eb3278428df0ec8feb7f6103ee4dcea382a07ecb94aa"
+    },
+    {
+      "path": "native/lut/include/dosling_scaler.h",
+      "sha256": "dee88dfe554935bc13b60cd0a5b9d90c8d00dcb77205c360bcf1959553832c98"
+    },
+    {
+      "path": "native/lut/models/student-v37.bin",
+      "sha256": "34b97b9443e376e983840468f897385ec752d343e068afc8e5690d3bfc7ff309"
+    },
+    {
+      "path": "native/lut/models/student-v37.h",
+      "sha256": "8b56b09b0f4077f9c87c81f51073c566b3c8af652aba511b14885f242e69c0a8"
+    },
+    {
+      "path": "native/lut/src/aa_math.hpp",
+      "sha256": "58cd769185362565534494eb7dad4e4c3f3401b9cd5b8adf82b2a2dbbcf4788f"
+    },
+    {
+      "path": "native/lut/src/aa_plane.cpp",
+      "sha256": "e8502813c6f4995c5c6a6c4ee6a49b51554490846d5a2b2f62841c22703a3121"
+    },
+    {
+      "path": "native/lut/src/api.cpp",
+      "sha256": "4d6660cb4951b98b41ef6593d8053c2bec4402992fe0949a71a3f49da0959b37"
+    },
+    {
+      "path": "native/lut/src/frame.cpp",
+      "sha256": "fc943d3afea4fc521400e930e685b64d790bc446ac7721bee08d4cadbee24d25"
+    },
+    {
+      "path": "native/lut/src/hq_block.c",
+      "sha256": "be27fba69514b267f977bcdc59d6fa181f1d2ae044168ec0fd7f8aadbe25831c"
+    },
+    {
+      "path": "native/lut/src/model.cpp",
+      "sha256": "e8312b18094852c0e8017fecd844366d62e47293ba44bcd6aa7dfb97533299bc"
+    },
+    {
+      "path": "native/lut/src/model.hpp",
+      "sha256": "81e28476f40c12a1f709b5e4c11ac9e6f60c925d15465208ad9be342b1f0258a"
+    },
+    {
+      "path": "native/lut/src/ufo.cpp",
+      "sha256": "b2743a898b45b9a954e4f32ea34b99d8427627a08339a47c28948557b2f809f4"
+    },
+    {
+      "path": "native/lut/tests/aa_endpoint_noise_test.cpp",
+      "sha256": "c173a1c71457674682fbfecb267752bd8ac80ca6e747a48f28cad76215ae1c78"
+    },
+    {
+      "path": "native/lut/tests/aa_math_test.cpp",
+      "sha256": "36776a88f895c5b7eb350ed4b7c635440787d147bb57309e3c8aeca8466d7581"
+    },
+    {
+      "path": "native/lut/tests/aa_orthogonal_test.cpp",
+      "sha256": "5913c94013599bcafab0e3817e1e821c3545b2afa656498910a0bc90b8453287"
+    },
+    {
+      "path": "native/lut/tests/aa_plane_test.cpp",
+      "sha256": "9a0039b16017bd49d7670b4ea7a496d266a72f8c4d03d83b4eb7342c035116f7"
+    },
+    {
+      "path": "native/lut/tests/aa_tolerance_test.cpp",
+      "sha256": "d5122b27efafafbad0206d66c4a3aa121cebbc4e47186495792ee9a87c31b504"
+    },
+    {
+      "path": "native/lut/tests/checker_sampling_test.cpp",
+      "sha256": "3754745275e36196321eba120c09c6d7018f7c7e2637c50de4eb6bfeb8ca6ae1"
+    },
+    {
+      "path": "native/lut/tests/coverage_edge_test.cpp",
+      "sha256": "307404379ab83d6d108e923cbb9b381e550235222bce2b047f2f6ffc2fb8570e"
+    },
+    {
+      "path": "native/lut/tests/diagonal_coherence_test.cpp",
+      "sha256": "9fa632ece61110a6e89fa17e65e117a1f1566a7f9149256230c6313bd28860fb"
+    },
+    {
+      "path": "native/lut/tests/exception_test.cpp",
+      "sha256": "db653fbe1e7fbe07212248f7f510c11d47081f6ea331d7d702bf8e99834ed02d"
+    },
+    {
+      "path": "native/lut/tests/general_aa_test.cpp",
+      "sha256": "6a4eafd175b39490f7eb17c9aba7ee34444a36b5dabd9e683afa24742f0ae70b"
+    },
+    {
+      "path": "native/lut/tests/graphics_plane_test.cpp",
+      "sha256": "e6a40258d0356d6a99c4ad53ea1619a80d50aada226558db601042db7ec8cc89"
+    },
+    {
+      "path": "native/lut/tests/hooked_bowl_test.cpp",
+      "sha256": "d48e68d578fc893d004ff8f843d102b236f6893f32cd02bbc91401176552a77e"
+    },
+    {
+      "path": "native/lut/tests/notch_conflict_test.cpp",
+      "sha256": "a4a974dce5387e0917493a2edc8dbfb925872d6d844dad2a47889d61dea44682"
+    },
+    {
+      "path": "native/lut/tests/runtime_test.cpp",
+      "sha256": "d52ad928bdd4f4ae87fe69afda175471df0361881c635c092eb99f415e3f30f8"
+    },
+    {
+      "path": "native/lut/tests/short_join_test.cpp",
+      "sha256": "10fe660e85bf3b79dcde2280601564ce36a1778a2006a2472000a3f347408b55"
+    },
+    {
+      "path": "native/lut/tests/small_counter_test.cpp",
+      "sha256": "0b922f6d10d2012194e176e61c67d4ea8c25162dc2e4d8f1fe572faf9211f884"
+    },
+    {
+      "path": "native/lut/tests/small_letter_test.cpp",
+      "sha256": "aea8ca86cac672f5422ba929b5d2ac77e67b525ec267362dd1134d68aaaa3f02"
+    },
+    {
+      "path": "native/lut/tests/square_junction_test.cpp",
+      "sha256": "f310ce7d3065f576f2a63c8ef7fac46250698843edb335576624bf61372a38da"
+    },
+    {
+      "path": "native/lut/tools/embed_model.py",
+      "sha256": "933f632618a69767214a13b0e3c34611ff7be9a44e81c1cdd02faca766b1cc75"
+    },
+    {
+      "path": "native/lut/tools/fit.cpp",
+      "sha256": "b5302561a0fb1619a2a01b45f752e2f7143142adbef4b391b1b0d3d527074789"
+    },
+    {
+      "path": "native/lut/tools/fit5.cpp",
+      "sha256": "9dfbec2de8f7d76afdbc994fdec9f3d7e654c691651bd5420e6ce272a20349ad"
+    },
+    {
+      "path": "native/lut/tools/fit_common.hpp",
+      "sha256": "2278f87f52a6647480c93d0c968ad1b0953957794c5abfd90dc216a1c97055bd"
+    },
+    {
+      "path": "native/lut/tools/table_model.py",
+      "sha256": "a1f5c062645badc0078fdf2a110b99c0b98908509a0684898ed5e12ce9010427"
+    },
+    {
+      "path": "native/vendor/hqx/AUTHORS",
+      "sha256": "fc73b41e8854da04c39be1d3bb9fc13f6032fdf2ef902ab8a65d29c76e27d092"
+    },
+    {
+      "path": "native/vendor/hqx/COPYING",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "native/vendor/hqx/ORIGIN.txt",
+      "sha256": "ed8c737db6b29a4368cc0e529ac9b59af0193e101f542fd26cd02a131fec3c89"
+    },
+    {
+      "path": "native/vendor/hqx/README",
+      "sha256": "bcdde9427027ac8d635b046e1ed1505c4b2d751c3fb81a87047d9a19778af99c"
+    },
+    {
+      "path": "native/vendor/hqx/common.h",
+      "sha256": "9ca8cdb0c623c6c4ed817bbbfda8737b697ad7437dc28b35bac74ac7d38ca343"
+    },
+    {
+      "path": "native/vendor/hqx/hq2x.c",
+      "sha256": "1a1bd74d9b72a0ee24774f981c94a270287702964b68d32f2ab59425256c4ade"
+    },
+    {
+      "path": "native/vendor/hqx/hq3x.c",
+      "sha256": "82ed67ccc4f9c98092d39ec9cc84fb5b01a646278d30a396670dc55a147cb39c"
+    },
+    {
+      "path": "native/vendor/hqx/hq4x.c",
+      "sha256": "8be03d6f0b910eabd95b420c3cae14b4c2b471a75c6ffdfb54a77d110446b0ef"
+    },
+    {
+      "path": "native/vendor/hqx/hqx.h",
+      "sha256": "88e57f90efcd7136b42d807568925d0898ce9d579cfe5a9a3e97c24309e92d4e"
+    },
+    {
+      "path": "native/vendor/hqx/init.c",
+      "sha256": "01bb6cf251fbe7b2df742cecbd6f531d3ceb1e19c5b88ffca05a7a55d2607d57"
+    }
+  ],
+  "public_packaging_changes": [
+    "README and contributor/licensing/integration/AI documentation",
+    "CMake omits six private-corpus test targets",
+    "Filtered public model manifest and lossless editable JSON converter"
+  ],
+  "private_material_excluded": [
+    "game screenshots and game files",
+    "private feedback and conversations",
+    "historical builds and galleries",
+    "six corpus-dependent regression tests"
+  ]
+}

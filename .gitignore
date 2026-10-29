@@ -1,0 +1,17 @@
+/build*/
+/install*/
+*.dylib
+*.so
+*.so.*
+*.dll
+*.o
+*.a
+*.framework/
+__pycache__/
+.DS_Store
+.env
+.env.*
+/pilot/
+/feedback/
+/sources/
+/private/

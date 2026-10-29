@@ -1,0 +1,21 @@
+https://github.com/grom358/hqx
+Commit a1c7d415f4bb7b947c4c2e47faf220b0148f4bac
+Local changes (2026-09-21): common.h uses explicit signed differences for abs;
+init.c converts negative chroma to signed int before adding 128, avoiding
+undefined float-to-unsigned conversion. Filter patterns are unchanged.
+AUTHORS, README, COPYING and filter sources are unmodified.
+LGPL-2.1-or-later. Complete library source included here.
+
+To modify/replace the library in the app: copy the app to a writable folder,
+install Apple Command Line Tools, edit the sources here and run sh rebuild.sh.
+The universal library is replaceable; library validation is not enabled.
+Reverse engineering the app to debug modifications to this library is permitted.
+
+Native dos-scaler changes (2026-10-17):
+common.h replaces the 16,777,216-entry (64 MiB) RGBtoYUV table with exact
+integer /1000 conversion. init.c retains a no-op hqxInit symbol. This also
+matches the integer color conversion of this project's FFmpeg HQ3x reference,
+which differs at a few truncation boundaries from the floating-point upstream
+initialization. HQ2x/HQ3x/HQ4x pattern and blend sources remain unchanged.
+This copy is built as a separate replaceable shared library (dos_hqx).
+It is not the emulator app binary; rebuild with the native CMake project.

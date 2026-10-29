@@ -1,0 +1,22 @@
+name: Native build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S native/lut -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build --parallel 4
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+      - name: Check editable model round trip
+        run: |
+          python3 native/lut/tools/model_json.py pack native/lut/models/student-v37.json /tmp/model.bin
+          cmp native/lut/models/student-v37.bin /tmp/model.bin
